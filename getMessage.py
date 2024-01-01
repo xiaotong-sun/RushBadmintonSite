@@ -15,7 +15,7 @@ header = {
     'Accept-Encoding': 'gzip, deflate',
     'Accept-Language': '*',
     # cookie需要改变
-    "Cookie": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvIjoiMTIzMTA2MDEwNzk3Iiwib3QiOiJ3ZWNoYXRfcXkiLCJ0dCI6IndlY2hhdF9xeSIsInQiOiIxMjMxMDYwMTA3OTciLCJub3ciOjE3MDI2NDI5ODksImV4cCI6MTcwMjY0NjU4OX0.L9SqJ56incpU2CpLqUcE6itoy-_gLXhkOhXpYiAHSjE",
+    "Cookie": "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvIjoiMTIzMTA2MDEwNzk3IiwiZXhwIjoxNzAzNTEyNjA0LCJ0IjoiMTIzMTA2MDEwNzk3Iiwibm93IjoxNzAzNTA5MDA0LCJ0dCI6ImRhdGFiYXNlIiwib3QiOiJ3ZWNoYXRfcXkifQ.4zUspHAL2SHjlqst9rfH6AYtUrrQi8KdPmy6DRXg0MI",
 }
 
 url = 'http://wechat.njust.edu.cn/api/v2/appGym/listAreaPriceBySiteIdAndTime'
@@ -33,14 +33,14 @@ url = 'http://wechat.njust.edu.cn/api/v2/appGym/listAreaPriceBySiteIdAndTime'
 #     with open(bookDate + "-baseball.json", "w+") as f:
 #         json.dump(resText, f, indent=4, ensure_ascii=False)
 
-bookDate = "2023-12-18"
-data = {"siteId": "1ce71c8c2b934461bd33c5bd469fc961", "bookDate": bookDate}  # Baseball
-# data = {"siteId": "e1f5c85e86c34c46a2d0935452094b77", "bookDate": bookDate}  # Badminton
+bookDate = "2023-12-27"
+# data = {"siteId": "1ce71c8c2b934461bd33c5bd469fc961", "bookDate": bookDate}  # Baseball
+data = {"siteId": "e1f5c85e86c34c46a2d0935452094b77", "bookDate": bookDate}  # Badminton
 
 res = requests.post(url=url, headers=header, json=data)
 tm = res.elapsed.total_seconds()  # 获取请求时间
 print(tm)
 print(res.status_code)
 resText = json.loads(res.text)
-with open(bookDate + "-baseball.json", "w+") as f:
+with open(bookDate + "-badminton.json", "w+") as f:
     json.dump(resText, f, indent=4, ensure_ascii=False)

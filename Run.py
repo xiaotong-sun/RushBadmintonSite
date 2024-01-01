@@ -14,14 +14,14 @@ header = {
     'Accept-Encoding': 'gzip, deflate',
     'Accept-Language': 'zh-CN,zh;q=0.9',
     # cookie需要改变
-    "Cookie": "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvIjoiMTIzMTA2MDEwNzk3Iiwibm93IjoxNzAyNzcwMzYwLCJ0dCI6IndlY2hhdF9xeSIsInQiOiIxMjMxMDYwMTA3OTciLCJvdCI6IndlY2hhdF9xeSIsImV4cCI6MTcwMjc3Mzk2MH0.Ve7h6x1gwQBUsfYEeB7kKddRAcJuUGly2TapiVJCDxY",
+    "Cookie": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvdCI6IndlY2hhdF9xeSIsInR0IjoiZGF0YWJhc2UiLCJub3ciOjE3MDM2MzQ3MzUsInQiOiIxMjMxMDYwMTA3OTciLCJvIjoiMTIzMTA2MDEwNzk3IiwiZXhwIjoxNzAzNjM4MzM1fQ.r3JNI7_qCIXvcIi6-Xm8_Ey8wPwVmaR3CgwRcRlplNU",
 }
 
 url = 'http://wechat.njust.edu.cn/api/v2/appGym/submitAreaOrder'
 
-# 别忘了改week
-struct_openTime = "2023-12-17 08:00:00"
-bookDate = "2023-12-18"
+# 需要修改的值：opentime，bookDate，price，week，cookie
+struct_openTime = "2023-12-27 08:00:00"
+bookDate = "2023-12-28"
 orderNum = 2
 price = 15.0
 payAmount = price * orderNum
@@ -29,7 +29,7 @@ payAmount = price * orderNum
 # week1 √ period:19:00~21:00 price:15.0
 # week2 × period:00:00~00:00 price:15.0
 # week3 √ period:15:00~17:00 price:0.0
-# week4 × period:00:00~00:00 price:15.0
+# week4 √ period:19:00~21:00 price:15.0
 # week5 × period:00:00~00:00 price:15.0
 week1 = [
     # 6号场地
@@ -471,7 +471,7 @@ week4 = [
             {
                 "areaId": "80c197c0c1984d5292db7e74a661e482",
                 "timeId": "219fb8221393417e9e03c50a4e924a39",
-                "areaPriceId": "a505d9ca80d34a45985be5cad1bc1a8c",
+                "areaPriceId": "3cb486d497b047e0bd90a5e346673f9e",
                 "areaName": "6",
                 "price": price,
                 "bookingDate": bookDate,
@@ -481,7 +481,7 @@ week4 = [
             {
                 "areaId": "80c197c0c1984d5292db7e74a661e482",
                 "timeId": "554c0fd44f734f58ba09e52186dc8bea",
-                "areaPriceId": "c4778c036060426d834a279ae9632bcc",
+                "areaPriceId": "3e69e4224acb4a049e23ffd49dbc99bc",
                 "areaName": "6",
                 "price": price,
                 "bookingDate": bookDate,
@@ -499,7 +499,7 @@ week4 = [
             {
                 "areaId": "4e8c8ee1ccee45bbb7ca5774b00a6670",
                 "timeId": "219fb8221393417e9e03c50a4e924a39",
-                "areaPriceId": "5abda24dcf60477cae639140830cf380",
+                "areaPriceId": "b5b3060e069f4eea80134d60faaa4718",
                 "areaName": "8",
                 "price": price,
                 "bookingDate": bookDate,
@@ -509,7 +509,7 @@ week4 = [
             {
                 "areaId": "4e8c8ee1ccee45bbb7ca5774b00a6670",
                 "timeId": "554c0fd44f734f58ba09e52186dc8bea",
-                "areaPriceId": "e6b0b6e13b644b34a1518a8ab9e57ef5",
+                "areaPriceId": "613ca8c312ec4dfe8f17843f51d0f887",
                 "areaName": "8",
                 "price": price,
                 "bookingDate": bookDate,
@@ -527,7 +527,7 @@ week4 = [
             {
                 "areaId": "496c885b499c47d0a51885c2e68f5021",
                 "timeId": "219fb8221393417e9e03c50a4e924a39",
-                "areaPriceId": "a4296d6cc74a4abaa5663c6090a59dd9",
+                "areaPriceId": "60888613438240e79ed2dd7fd49db9cf",
                 "areaName": "9",
                 "price": price,
                 "bookingDate": bookDate,
@@ -537,7 +537,7 @@ week4 = [
             {
                 "areaId": "496c885b499c47d0a51885c2e68f5021",
                 "timeId": "554c0fd44f734f58ba09e52186dc8bea",
-                "areaPriceId": "ebe1f48a8cde40b29e138823ac82b8c3",
+                "areaPriceId": "317b6cbda1d94a8fb1885475e81ef1f7",
                 "areaName": "9",
                 "price": price,
                 "bookingDate": bookDate,
@@ -555,7 +555,7 @@ week4 = [
             {
                 "areaId": "6d7c5e380fcb4f1b881104d7f19f79e0",
                 "timeId": "219fb8221393417e9e03c50a4e924a39",
-                "areaPriceId": "bf96e1188b604240956429821645c776",
+                "areaPriceId": "58317dde41d347039da854a74fc7231b",
                 "areaName": "12",
                 "price": price,
                 "bookingDate": bookDate,
@@ -565,7 +565,7 @@ week4 = [
             {
                 "areaId": "6d7c5e380fcb4f1b881104d7f19f79e0",
                 "timeId": "554c0fd44f734f58ba09e52186dc8bea",
-                "areaPriceId": "28c2aaf326e74e87bc2df2a1d4d1a831",
+                "areaPriceId": "4024cea6f6454e0dbba8ffe219c44778",
                 "areaName": "12",
                 "price": price,
                 "bookingDate": bookDate,
@@ -583,7 +583,7 @@ week4 = [
             {
                 "areaId": "44bf52facd134cf6a4c3a581c2d7700a",
                 "timeId": "219fb8221393417e9e03c50a4e924a39",
-                "areaPriceId": "4e88945960f944c1af3b0bf4397e8fdb",
+                "areaPriceId": "ac7c4415729c4b0699bc997d66da6bbf",
                 "areaName": "16",
                 "price": price,
                 "bookingDate": bookDate,
@@ -593,7 +593,7 @@ week4 = [
             {
                 "areaId": "44bf52facd134cf6a4c3a581c2d7700a",
                 "timeId": "554c0fd44f734f58ba09e52186dc8bea",
-                "areaPriceId": "4b240d03894747818262a1c3d549c691",
+                "areaPriceId": "d994f298dd4e4237830e5b65755ee330",
                 "areaName": "16",
                 "price": price,
                 "bookingDate": bookDate,
@@ -777,7 +777,7 @@ if __name__ == '__main__':
             print("------------开始抢票-------------")
             process_list = []
             for i in range(5):
-                process_list.append(pool.apply_async(submitOrder, (week1[i],)))
+                process_list.append(pool.apply_async(submitOrder, (week4[i],)))
             pool.close()
             pool.join()
 
