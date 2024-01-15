@@ -2,8 +2,6 @@ import json
 import time
 import requests
 
-# TODO 将获取到的信息进行整理，得到每个场地的名字，对应的areaID，areaPriceID，timeID，对应的时间段，周几
-
 header = {
     'Host': 'wechat.njust.edu.cn',
     'Proxy-Connection': 'keep-alive',
@@ -15,7 +13,7 @@ header = {
     'Accept-Encoding': 'gzip, deflate',
     'Accept-Language': '*',
     # cookie需要改变
-    "Cookie": "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvIjoiMTIzMTA2MDEwNzk3IiwiZXhwIjoxNzAzNTEyNjA0LCJ0IjoiMTIzMTA2MDEwNzk3Iiwibm93IjoxNzAzNTA5MDA0LCJ0dCI6ImRhdGFiYXNlIiwib3QiOiJ3ZWNoYXRfcXkifQ.4zUspHAL2SHjlqst9rfH6AYtUrrQi8KdPmy6DRXg0MI",
+    "Cookie": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDQxNTY0MTgsIm8iOiIxMjMxMDYwMTA3OTciLCJub3ciOjE3MDQxNTI4MTgsInQiOiIxMjMxMDYwMTA3OTciLCJvdCI6IndlY2hhdF9xeSIsInR0IjoiZGF0YWJhc2UifQ.2qZMdiO8fX2vl4aTxd9wdzvPSa0kNA8fendzWEn8FGw",
 }
 
 url = 'http://wechat.njust.edu.cn/api/v2/appGym/listAreaPriceBySiteIdAndTime'
@@ -33,7 +31,7 @@ url = 'http://wechat.njust.edu.cn/api/v2/appGym/listAreaPriceBySiteIdAndTime'
 #     with open(bookDate + "-baseball.json", "w+") as f:
 #         json.dump(resText, f, indent=4, ensure_ascii=False)
 
-bookDate = "2023-12-27"
+bookDate = "2024-01-01"
 # data = {"siteId": "1ce71c8c2b934461bd33c5bd469fc961", "bookDate": bookDate}  # Baseball
 data = {"siteId": "e1f5c85e86c34c46a2d0935452094b77", "bookDate": bookDate}  # Badminton
 

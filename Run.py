@@ -14,21 +14,23 @@ header = {
     'Accept-Encoding': 'gzip, deflate',
     'Accept-Language': 'zh-CN,zh;q=0.9',
     # cookie需要改变
-    "Cookie": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvdCI6IndlY2hhdF9xeSIsInR0IjoiZGF0YWJhc2UiLCJub3ciOjE3MDM2MzQ3MzUsInQiOiIxMjMxMDYwMTA3OTciLCJvIjoiMTIzMTA2MDEwNzk3IiwiZXhwIjoxNzAzNjM4MzM1fQ.r3JNI7_qCIXvcIi6-Xm8_Ey8wPwVmaR3CgwRcRlplNU",
+    "Cookie": "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvdCI6IndlY2hhdF9xeSIsInR0IjoiZGF0YWJhc2UiLCJub3ciOjE3MDUzMTg3NDksImV4cCI6MTcwNTMyMjM0OSwibyI6IjEyMzEwNjAxMDc5NyIsInQiOiIxMjMxMDYwMTA3OTcifQ.YvwySAQMtbtSCgw7NIKaFgY6cXBoxoXG8gxfulwFjQ0",
 }
 
 url = 'http://wechat.njust.edu.cn/api/v2/appGym/submitAreaOrder'
 
 # 需要修改的值：opentime，bookDate，price，week，cookie
-struct_openTime = "2023-12-27 08:00:00"
-bookDate = "2023-12-28"
+struct_openTime = "2024-01-16 08:00:00"
+bookDate = "2024-01-17"
 orderNum = 2
 price = 15.0
+# price = 0.0
 payAmount = price * orderNum
 
 # week1 √ period:19:00~21:00 price:15.0
 # week2 × period:00:00~00:00 price:15.0
 # week3 √ period:15:00~17:00 price:0.0
+# week3_√ period:19:00~21:00 price:15.0
 # week4 √ period:19:00~21:00 price:15.0
 # week5 × period:00:00~00:00 price:15.0
 week1 = [
@@ -460,6 +462,149 @@ week3 = [
     },
 ]
 
+week3_ = [
+    # 1号场地
+    {
+        "siteId": "e1f5c85e86c34c46a2d0935452094b77",
+        "gymId": "790c8055a06311e8a69022faa7560813",
+        "payAmount": payAmount,
+        "areaRecordList": [
+            # 19:00 ~ 20:00
+            {
+                "areaId": "768abcc7c3804ac4b1ce31abf788fd00",
+                "timeId": "219fb8221393417e9e03c50a4e924a39",
+                "areaPriceId": "41b22251d4de4b97915962b47aa0df35",
+                "areaName": "1",
+                "price": price,
+                "bookingDate": bookDate,
+                "userType": 1,
+            },
+            # 20:00 ~ 21:00
+            {
+                "areaId": "768abcc7c3804ac4b1ce31abf788fd00",
+                "timeId": "554c0fd44f734f58ba09e52186dc8bea",
+                "areaPriceId": "0ecaaa425a4b400985d15e2b030cf7a8",
+                "areaName": "1",
+                "price": price,
+                "bookingDate": bookDate,
+                "userType": 1,
+            },
+        ],
+    },
+    # 3号场地
+    {
+        "siteId": "e1f5c85e86c34c46a2d0935452094b77",
+        "gymId": "790c8055a06311e8a69022faa7560813",
+        "payAmount": payAmount,
+        "areaRecordList": [
+            # 19:00 ~ 20:00
+            {
+                "areaId": "491dba0be92c4f4faef27283e9fc891f",
+                "timeId": "219fb8221393417e9e03c50a4e924a39",
+                "areaPriceId": "d103742940d2433096abfe3040be21d4",
+                "areaName": "3",
+                "price": price,
+                "bookingDate": bookDate,
+                "userType": 1,
+            },
+            # 20:00 ~ 21:00
+            {
+                "areaId": "491dba0be92c4f4faef27283e9fc891f",
+                "timeId": "554c0fd44f734f58ba09e52186dc8bea",
+                "areaPriceId": "1f56fb1908b64ab591969e5e19d384f4",
+                "areaName": "3",
+                "price": price,
+                "bookingDate": bookDate,
+                "userType": 1,
+            },
+        ],
+    },
+    # 5号场地
+    {
+        "siteId": "e1f5c85e86c34c46a2d0935452094b77",
+        "gymId": "790c8055a06311e8a69022faa7560813",
+        "payAmount": payAmount,
+        "areaRecordList": [
+            # 19:00 ~ 20:00
+            {
+                "areaId": "f8fc3d1d76b8463d9f65a38e5247eeeb",
+                "timeId": "219fb8221393417e9e03c50a4e924a39",
+                "areaPriceId": "0ba4cbc187964babbded5be1a0ce849e",
+                "areaName": "5",
+                "price": price,
+                "bookingDate": bookDate,
+                "userType": 1,
+            },
+            # 20:00 ~ 21:00
+            {
+                "areaId": "f8fc3d1d76b8463d9f65a38e5247eeeb",
+                "timeId": "554c0fd44f734f58ba09e52186dc8bea",
+                "areaPriceId": "aae39fcab3e947479b1a09fa1f9eae51",
+                "areaName": "5",
+                "price": price,
+                "bookingDate": bookDate,
+                "userType": 1,
+            },
+        ],
+    },
+    # 9号场地
+    {
+        "siteId": "e1f5c85e86c34c46a2d0935452094b77",
+        "gymId": "790c8055a06311e8a69022faa7560813",
+        "payAmount": payAmount,
+        "areaRecordList": [
+            # 19:00 ~ 20:00
+            {
+                "areaId": "496c885b499c47d0a51885c2e68f5021",
+                "timeId": "219fb8221393417e9e03c50a4e924a39",
+                "areaPriceId": "523fa68ce409405f8a76d146eb5021ba",
+                "areaName": "9",
+                "price": price,
+                "bookingDate": bookDate,
+                "userType": 1,
+            },
+            # 20:00 ~ 21:00
+            {
+                "areaId": "496c885b499c47d0a51885c2e68f5021",
+                "timeId": "554c0fd44f734f58ba09e52186dc8bea",
+                "areaPriceId": "f8bb40c373184fcfa993dac36c9f9c73",
+                "areaName": "9",
+                "price": price,
+                "bookingDate": bookDate,
+                "userType": 1,
+            },
+        ],
+    },
+    # 13号场地
+    {
+        "siteId": "e1f5c85e86c34c46a2d0935452094b77",
+        "gymId": "790c8055a06311e8a69022faa7560813",
+        "payAmount": payAmount,
+        "areaRecordList": [
+            # 19:00 ~ 20:00
+            {
+                "areaId": "71c623b466e0478abc0b575169f931eb",
+                "timeId": "219fb8221393417e9e03c50a4e924a39",
+                "areaPriceId": "f81313a39b6a4aeabd075d9ddab83e22",
+                "areaName": "13",
+                "price": price,
+                "bookingDate": bookDate,
+                "userType": 1,
+            },
+            # 20:00 ~ 21:00
+            {
+                "areaId": "71c623b466e0478abc0b575169f931eb",
+                "timeId": "554c0fd44f734f58ba09e52186dc8bea",
+                "areaPriceId": "3d5923095e52424b8b3f5382689dc84b",
+                "areaName": "13",
+                "price": price,
+                "bookingDate": bookDate,
+                "userType": 1,
+            },
+        ],
+    },
+]
+
 week4 = [
     # 6号场地
     {
@@ -777,7 +922,7 @@ if __name__ == '__main__':
             print("------------开始抢票-------------")
             process_list = []
             for i in range(5):
-                process_list.append(pool.apply_async(submitOrder, (week4[i],)))
+                process_list.append(pool.apply_async(submitOrder, (week3_[i],)))
             pool.close()
             pool.join()
 
