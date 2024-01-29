@@ -14,14 +14,14 @@ header = {
     'Accept-Encoding': 'gzip, deflate',
     'Accept-Language': 'zh-CN,zh;q=0.9',
     # cookie需要改变
-    "Cookie": "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvdCI6IndlY2hhdF9xeSIsInR0IjoiZGF0YWJhc2UiLCJub3ciOjE3MDUzMTg3NDksImV4cCI6MTcwNTMyMjM0OSwibyI6IjEyMzEwNjAxMDc5NyIsInQiOiIxMjMxMDYwMTA3OTcifQ.YvwySAQMtbtSCgw7NIKaFgY6cXBoxoXG8gxfulwFjQ0",
+    "Cookie": "token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDYwNTc1MDAsIm90Ijoid2VjaGF0X3F5IiwidHQiOiJkYXRhYmFzZSIsIm8iOiIxMjMxMDYwMTA3OTciLCJub3ciOjE3MDYwNTM5MDAsInQiOiIxMjMxMDYwMTA3OTcifQ.pjiVL_qxgbA140LUrn24a5YGlY1d6USASlvR9rNU3fQ",
 }
 
 url = 'http://wechat.njust.edu.cn/api/v2/appGym/submitAreaOrder'
 
 # 需要修改的值：opentime，bookDate，price，week，cookie
-struct_openTime = "2024-01-16 08:00:00"
-bookDate = "2024-01-17"
+struct_openTime = "2024-01-24 08:00:00"
+bookDate = "2024-01-25"
 orderNum = 2
 price = 15.0
 # price = 0.0
@@ -922,7 +922,7 @@ if __name__ == '__main__':
             print("------------开始抢票-------------")
             process_list = []
             for i in range(5):
-                process_list.append(pool.apply_async(submitOrder, (week3_[i],)))
+                process_list.append(pool.apply_async(submitOrder, (week4[i],)))
             pool.close()
             pool.join()
 
