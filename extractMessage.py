@@ -34,8 +34,8 @@ import json
 #         with open(writePath, 'w+') as wf:
 #             json.dump(total_Period_Area, wf, indent=4, ensure_ascii=False)
 
-readPath = '2023-12-18' + '-baseball.json'
-writePath = 'week' + '-baseball.json'
+readPath = '2024-03-06' + '-badminton.json'
+writePath = 'week3' + '-badminton.json'
 with open(readPath, 'r') as f:
     message = json.load(f)
     total_Period_Area = []
@@ -43,7 +43,7 @@ with open(readPath, 'r') as f:
         start_end_Mes = message["data"][j]["startTime"] + "~" + message["data"][j]["endTime"]
         time_dict = {"Period": start_end_Mes}
         areaList = []
-        for k in range(0, 4):  # 共4个场地
+        for k in range(0, 17):  # 共4个场地
             areaPriceMes = message["data"][j]["listAreaPrice"][k]
             areaPriceId = areaPriceMes["areaPriceId"]
             areaId = areaPriceMes["areaId"]

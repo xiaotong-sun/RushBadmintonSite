@@ -13,7 +13,7 @@ header = {
     'Accept-Encoding': 'gzip, deflate',
     'Accept-Language': '*',
     # cookie需要改变
-    "Cookie": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDQxNTY0MTgsIm8iOiIxMjMxMDYwMTA3OTciLCJub3ciOjE3MDQxNTI4MTgsInQiOiIxMjMxMDYwMTA3OTciLCJvdCI6IndlY2hhdF9xeSIsInR0IjoiZGF0YWJhc2UifQ.2qZMdiO8fX2vl4aTxd9wdzvPSa0kNA8fendzWEn8FGw",
+    "Cookie": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvdCI6IndlY2hhdF9xeSIsInR0IjoiZGF0YWJhc2UiLCJ0IjoiMTIzMTA2MDEwNzk3Iiwibm93IjoxNzEwMDM2NTg2LCJvIjoiMTIzMTA2MDEwNzk3IiwiZXhwIjoxNzEwMDQwMTg2fQ.YiuwvW3EjA245ORzy__pUrMQkKJRF4wGvTzM39o3aVw",
 }
 
 url = 'http://wechat.njust.edu.cn/api/v2/appGym/listAreaPriceBySiteIdAndTime'
@@ -31,7 +31,7 @@ url = 'http://wechat.njust.edu.cn/api/v2/appGym/listAreaPriceBySiteIdAndTime'
 #     with open(bookDate + "-baseball.json", "w+") as f:
 #         json.dump(resText, f, indent=4, ensure_ascii=False)
 
-bookDate = "2024-01-01"
+bookDate = "2024-03-10"
 # data = {"siteId": "1ce71c8c2b934461bd33c5bd469fc961", "bookDate": bookDate}  # Baseball
 data = {"siteId": "e1f5c85e86c34c46a2d0935452094b77", "bookDate": bookDate}  # Badminton
 
