@@ -34,8 +34,8 @@ import json
 #         with open(writePath, 'w+') as wf:
 #             json.dump(total_Period_Area, wf, indent=4, ensure_ascii=False)
 
-readPath = '2024-03-06' + '-badminton.json'
-writePath = 'week3' + '-badminton.json'
+readPath = '2024-03-21' + '-badminton.json'
+writePath = 'week4' + '-badminton.json'
 with open(readPath, 'r') as f:
     message = json.load(f)
     total_Period_Area = []
